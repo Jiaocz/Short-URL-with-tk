@@ -71,7 +71,7 @@ if(isset($_POST['longurl']) && $shortdomain == null){
 if($shortdomain->status == 'OK' && !isset($shortdomain->error)){
     $result = array(
         'status' => 'success',
-        'domain' => $shortdomain['domain'][0]['domainname'],
+        'domain' => $shortdomain->domain[0]->domainname,
         'code' => '100'
     );
 
